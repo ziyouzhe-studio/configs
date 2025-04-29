@@ -14,4 +14,4 @@ decorations = "Buttonless"
 
 [font]
 normal.family = "0xProto Nerd Font"
-
+size = 18
