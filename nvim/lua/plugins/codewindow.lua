@@ -1,3 +1,4 @@
+-- 代码小地图
 return {
   "gorbit99/codewindow.nvim",
   config = function()
