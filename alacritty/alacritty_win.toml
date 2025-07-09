@@ -1,0 +1,24 @@
+general.import =
+["C\\Users\\WuWei\\AppData\\Roaming\\alacritty\\themes\\coolnight.toml"]
+
+[window]
+dimensions.columns = 120
+dimensions.lines = 30
+padding.x = 10
+padding.y = 10
+decorations = "Full"
+opactiy = 1
+
+[font]
+normal.family = "0xProto Nerd Font"
+normal.style = "Regular"
+bold.family = "0xProto Nerd Font"
+italic.family = "0xProto Nerd Font"
+size = 18
+
+[terminal.shell]
+program = "pwsh.exe"
+args = [
+    "-NoLogo",
+    "-WorkingDirectory","C:\\Users\\WuWei"
+]
