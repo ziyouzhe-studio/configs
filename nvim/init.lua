@@ -1,10 +1,7 @@
 require("core.options")
 require("core.keymaps")
 require("core.lazy")
-
--- 主题
-vim.cmd("colorscheme catppuccin")
-
+require("core.colorscheme")
 
 -- 设置背景透明
 vim.cmd("autocmd VimEnter * hi Normal guibg=NONE ctermbg=NONE")
