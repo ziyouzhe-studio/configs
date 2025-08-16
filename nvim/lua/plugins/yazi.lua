@@ -8,7 +8,7 @@ return {
 
     config = function(_, opts)
         require("yazi").setup(opts)
-        require("keymaps.yazi-keymap").setup() -- 绑定快捷键
+        require("options.yazi-keymap").setup() -- 绑定快捷键
     end,
 
     opst = {

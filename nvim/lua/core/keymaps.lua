@@ -14,42 +14,6 @@ vim.keymap.set('i', 'jk', '<ESC>', { noremap = true })
 -- 撤销输入
 vim.keymap.set({"n", "i"}, "<C-z>", "<Cmd>undo<CR>", {silent = true})
 
--- 设置<leader>为逗号
+-- 设置<leader>为空格
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-
--- markdown
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "markdown",
-  callback = function()
-    local opts = { noremap = true, silent = true, buffer = true }
-
-    -- Markdown Preview
-    vim.keymap.set("n", "<leader>mp", "<cmd>MarkdownPreview<CR>", opts)
-    vim.keymap.set("n", "<leader>ms", "<cmd>MarkdownPreviewStop<CR>", opts)
-
-    -- TableMode Toggle
-    vim.keymap.set("n", "<leader>mt", "<cmd>TableModeToggle<CR>", opts)
-
-    -- TOC 操作
-    vim.keymap.set("n", "<leader>mg", "<cmd>GenTocGFM<CR>", opts)
-    vim.keymap.set("n", "<leader>mu", "<cmd>UpdateToc<CR>", opts)
-
-    -- 折叠（vim-markdown 支持）
-    vim.keymap.set("n", "<leader>mf", "za", opts)
-
-    -- Pencil 开关软换行
-    vim.keymap.set("n", "<leader>mw", "<cmd>PencilSoft<CR>", opts)
-
-    -- 保存时自动格式化表格（可选）
-    vim.api.nvim_create_autocmd("BufWritePre", {
-      buffer = 0,
-      callback = function()
-        if vim.fn.exists(":TableFormat") == 2 then
-          vim.cmd("silent! TableFormat")
-        end
-      end,
-    })
-  end,
-})
-

@@ -14,6 +14,7 @@ return {
         name = "catppuccin",
         priority = 1000,
         opts = {
+            transparent_background = true, 
             style = "Mocha"
         },
         config = function (_, opts)
